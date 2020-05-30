@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      我
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding acotContent">
+  <ion-item line="none">
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    <ion-label position="floating">账号</ion-label>
+    <ion-input type="text" clear-input="true" maxlength="25" minlength="5" [(ngModel)]="userName"></ion-input>
+  </ion-item>
+
+  <ion-item line="none">
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-label position="floating">密码</ion-label>
+    <ion-input type="password" clear-input="true" maxlength="25" minlength="5" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <div class="btnDiv">
+    <ion-button shape="round">
+      <p>登 录</p>
+    </ion-button>
+  </div>
+
+  <div class="forgetPassDiv">
+    <a [routerLink]="[ '/forget-pass' ]">忘记密码？</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a [routerLink]="[ '/sign-on' ]">没有账号？</a>
+  </div>
+
+</ion-content>

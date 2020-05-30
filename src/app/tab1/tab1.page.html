@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      首页
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div>
+    <ion-img src="../../assets/img/heat_server.jpg"></ion-img>
+  </div>
+
+
+
+
+  <div style="text-align: center;margin-top: 50px;">
+    <ion-button style="margin-right: 35px; height: 100px; width: 100px;--border-radius:50px;" [routerLink]="['/recharge']">
+      <p>充值</p>
+    </ion-button>
+    <ion-button style="height: 100px; width: 100px;--border-radius:50px;" [routerLink]="['/weather']">
+      <p>天气</p>
+    </ion-button>
+    <br/>
+    <ion-button style="height: 100px; width: 100px;--border-radius:50px;margin-top: 15px;" [routerLink]="['/customer-server']">
+      <p>客服</p>
+    </ion-button>
+    <ion-button style="height: 100px; width: 100px;--border-radius:50px;margin-top: 15px;margin-left: 35px;" [routerLink]="['/customer-server']">
+      <p>供暖</p>
+    </ion-button>
+  </div>
+  
+
+
+</ion-content>

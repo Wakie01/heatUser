@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="/tabs/tab2" slot="start"></ion-back-button>
+    <ion-title>注册</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding signonContent">
+  <ion-item>
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    <ion-label position="floating">账号</ion-label>
+    <ion-input type="text" clear-input="true" maxlength="25" minlength="5" [(ngModel)]="uname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+    <ion-label position="floating">手机</ion-label>
+    <ion-input type="text" clear-input="true" maxlength="12" minlength="11" [(ngModel)]="utel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-label position="floating">密码</ion-label>
+    <ion-input type="password" clear-input="true" maxlength="25" minlength="5" [(ngModel)]="psw"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+    <ion-label position="floating">确认密码</ion-label>
+    <ion-input type="password" clear-input="true" maxlength="25" minlength="5" [(ngModel)]="pswAgain"></ion-input>
+  </ion-item>
+
+  <ion-item class="vertiItem">
+    <ion-button fill="outline" class="verticode"><p>发生验证码</p></ion-button>
+    <ion-input type="number" placeholder="输入验证码"></ion-input>
+  </ion-item>
+
+  <div class="btnDiv">
+    <ion-button shape="round" (click)="signOn()">
+      <p>注 册</p>
+    </ion-button>
+  </div>
+</ion-content>

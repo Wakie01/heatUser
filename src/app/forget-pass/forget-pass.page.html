@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="/tabs/tab2" slot="start"></ion-back-button>
+    <ion-title>忘记密码</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding findpswContent">
+  <ion-item>
+    <ion-icon name="person-outline" slot="start"></ion-icon>
+    <ion-label position="floating">账号</ion-label>
+    <ion-input type="text" clear-input="true" maxlength="25" minlength="5"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+    <ion-label position="floating">手机号</ion-label>
+    <ion-input type="phone" clear-input="true"></ion-input>
+  </ion-item>
+
+  <ion-item class="vertiItem">
+    <ion-button fill="outline" class="verticode"><p>发送验证码</p></ion-button>
+    <ion-input type="number" placeholder="输入验证码"></ion-input>
+  </ion-item>
+
+  <div class="btnDiv">
+    <ion-button shape="round" [routerLink]="[ '/resetpsw' ]">
+      <p>重置密码</p>
+    </ion-button>
+  </div>
+</ion-content>

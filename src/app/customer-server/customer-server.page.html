@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>客服</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding cs_content">
+  <ion-item>
+    <ion-icon name="person" slot="start"></ion-icon>
+    <ion-label position="floating">姓名</ion-label>
+    <ion-input type="text" clear-input="true" maxlength="6" minlength="2"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="phone-portrait" slot="start"></ion-icon>
+    <ion-label position="floating">联系电话</ion-label>
+    <ion-input type="phone" clear-input="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="home-outline" slot="start"></ion-icon>
+    <ion-label position="floating">供暖地址</ion-label>
+    <ion-input type="text" clear-input="true" minlength="5" maxlength="36"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="hammer-outline" slot="start" style="margin-top: 24px;"></ion-icon>
+    <ion-label position="floating" style="margin-bottom: 5px;">故障</ion-label>
+    <ion-select ok-text="确认" cancel-text="取消" [(ngModel)]="selectedProblem_cs" (ionChange)="selectProblem_cs()">
+      <ion-select-option value="leak_weather">供暖器漏水</ion-select-option>
+      <ion-select-option value="unheat">供暖器不热</ion-select-option>
+      <ion-select-option value="cantModify">供暖器温度不能调节</ion-select-option>
+      <ion-select-option value="other">其它</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item id="otherProblem_cs" hidden>
+    <ion-icon name="hammer-outline" slot="start"></ion-icon>
+    <ion-label position="floating">其它故障</ion-label>
+    <ion-input type="text" clear-input="true" minlength="5" maxlength="36"></ion-input>
+  </ion-item>
+
+  <div class="btnDiv">
+    <ion-button shape="round">
+      <p>提交</p>
+    </ion-button>
+  </div>
+</ion-content>
